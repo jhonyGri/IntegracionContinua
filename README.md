@@ -19,9 +19,8 @@ docker-networking ├── api │ ├── app.js │ ├── package.json 
 ##  🔩 Configuración y Ejecución del Proyecto
 
 ### 1. **Clonar el Repositorio**
-   bash
    git clone https://github.com/tu-usuario/docker-networking.git
-   cd docker-networking
+   
 
 ### 2. **Construir y Levantar los Contenedores**
 
