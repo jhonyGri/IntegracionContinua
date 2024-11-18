@@ -1,0 +1,26 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('checkout') {
+            steps {
+                git branch:'main', url: 'https://github.com/AlejoRendo/DockerImages.git'
+            }
+        }
+        stage('Build'){
+            steps{
+                echo 'Run build'
+            }
+        }
+        stage('Test'){
+            steps{
+                echo 'Run test'
+            }
+        }
+        stage('Deploy'){
+            steps {
+                sh 'docker-compose up -d'
+            }
+        }
+    }
+}
