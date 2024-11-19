@@ -17,10 +17,20 @@ pipeline {
                 echo 'Run test'
             }
         }
-        stage('Deploy'){
+
+        stage('Despliegue a entorno de pruebas') {
             steps {
-                sh 'docker-compose up -d'
+                script {
+                    sh 'docker-compose -f docker-compose.yml -f docker-compose.test.yml up -d --build'
+                }
             }
+        }
+    }
+
+    post {
+        always {
+            echo 'Limpiando los recursos de Docker...'
+            sh 'docker-compose down --volumes'
         }
     }
 }
