@@ -3,6 +3,7 @@
     "version": "1.0.0",
     "main": "app.js",
     "dependencies": {
+        "@sentry/node": "^7.57.0",
         "axios": "^1.7.8",
         "client": "file:",
         "express": "^4.18.2",
