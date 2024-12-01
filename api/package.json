@@ -4,6 +4,7 @@
     "main": "app.js",
     "dependencies": {
         "api": "file:",
-        "express": "^4.18.2"
+        "express": "^4.18.2",
+        "@sentry/node": "^7.57.0"
     }
 }
