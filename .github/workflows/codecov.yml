@@ -22,20 +22,7 @@ jobs:
         run: |
           docker compose up --build --abort-on-container-exit
 
-      - name: Copy coverage reports
-        run: |
-          mkdir -p ./coverage/api
-          mkdir -p ./coverage/client
-          docker cp api:/path/to/coverage/lcov.info ./coverage/api/lcov.info
-          docker cp client:/path/to/coverage/lcov.info ./coverage/client/lcov.info
-
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          files: |
-            ./coverage/api/lcov.info
-            ./coverage/client/lcov.info
-          flags: |
-            api
-            client
