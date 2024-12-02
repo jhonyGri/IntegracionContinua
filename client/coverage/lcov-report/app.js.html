@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">73.68% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/19</span>
+                <span class='fraction'>14/19</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">73.68% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/19</span>
+                <span class='fraction'>14/19</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -99,8 +99,24 @@
 <a name='L34'></a><a href='#L34'>34</a>
 <a name='L35'></a><a href='#L35'>35</a>
 <a name='L36'></a><a href='#L36'>36</a>
-<a name='L37'></a><a href='#L37'>37</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<a name='L37'></a><a href='#L37'>37</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -109,39 +125,23 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const express = <span class="cstat-no" title="statement not covered" >require("express");</span>
-const axios = <span class="cstat-no" title="statement not covered" >require("axios");</span>
-const Sentry = <span class="cstat-no" title="statement not covered" >require("@sentry/node");</span>
-const app = <span class="cstat-no" title="statement not covered" >express();</span>
-const PORT = <span class="cstat-no" title="statement not covered" >4000;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const express = require("express");
+const axios = require("axios");
+const Sentry = require("@sentry/node");
+const app = express();
+const PORT = 4000;
 &nbsp;
-<span class="cstat-no" title="statement not covered" >Sentry.init({</span>
+Sentry.init({
     dsn:"https://422c0b78ff60afb4ec6f6a6705ab4202@o4508395109416960.ingest.us.sentry.io/4508395435851776",
     integrations: [
         new Sentry.Integrations.Http({ tracing: true }),
@@ -149,10 +149,10 @@ const PORT = <span class="cstat-no" title="statement not covered" >4000;</span>
     tracesSampleRate: 1.0,
 });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >app.use(Sentry.Handlers.requestHandler());</span>
-<span class="cstat-no" title="statement not covered" >app.use(Sentry.Handlers.tracingHandler());</span>
+app.use(Sentry.Handlers.requestHandler());
+app.use(Sentry.Handlers.tracingHandler());
 &nbsp;
-<span class="cstat-no" title="statement not covered" >app.get("/", <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {</span>
+app.get("/", <span class="fstat-no" title="function not covered" >as</span>ync (req, res) =&gt; {
 <span class="cstat-no" title="statement not covered" >    try {</span>
         const response = <span class="cstat-no" title="statement not covered" >await axios.get("http://api:3000");</span>
 <span class="cstat-no" title="statement not covered" >        res.send(`El client recibió el mensaje: ${response.data}`);</span>
@@ -161,16 +161,16 @@ const PORT = <span class="cstat-no" title="statement not covered" >4000;</span>
     }
 });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >app.use(Sentry.Handlers.errorHandler());</span>
+app.use(Sentry.Handlers.errorHandler());
 &nbsp;
-<span class="cstat-no" title="statement not covered" >app.listen(PORT, <span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+app.listen(PORT, <span class="fstat-no" title="function not covered" >()</span> =&gt; {
 <span class="cstat-no" title="statement not covered" >    console.log(`Cliente escuchando en puerto ${PORT}`);</span>
 });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >try {</span>
-<span class="cstat-no" title="statement not covered" >  foo();</span>
+try {
+  foo();
 } catch (e) {
-<span class="cstat-no" title="statement not covered" >  Sentry.captureException(e);</span>
+  Sentry.captureException(e);
 }</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -178,7 +178,7 @@ const PORT = <span class="cstat-no" title="statement not covered" >4000;</span>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-12-02T01:36:56.284Z
+                at 2024-12-02T02:02:58.626Z
             </div>
         <script src="prettify.js"></script>
         <script>
