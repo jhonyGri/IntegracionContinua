@@ -7,5 +7,5 @@ RUN npm install --save-dev jest
 RUN mkdir -p /usr/src/app/coverage
 COPY . .
 RUN npm install --save-dev npm-run-all
-EXPOSE 4000
+EXPOSE 3000
 CMD ["npm", "run", "start-and-test"]
