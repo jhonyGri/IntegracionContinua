@@ -7,4 +7,4 @@ RUN npm install --save-dev jest
 RUN mkdir -p /usr/src/app/coverage
 COPY . .
 EXPOSE 3000
-CMD ["node", "app.js"]
+CMD ["npx", "npm-run-all", "test:coverage", "start"]
