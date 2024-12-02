@@ -29,8 +29,8 @@ jobs:
         run: |
          mkdir -p ./coverage/api
          mkdir -p ./coverage/client
-         docker cp $(docker-compose ps -q api):/usr/src/app/coverage/lcov.info ./coverage/api/lcov.info
-         docker cp $(docker-compose ps -q client):/usr/src/app/coverage/lcov.info ./coverage/client/lcov.info
+         docker cp dockerimages-api-1:/usr/src/app/coverage/lcov.info ./coverage/api/lcov.info
+         docker cp dockerimages-client-1:/usr/src/app/coverage/lcov.info ./coverage/client/lcov.info
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5
