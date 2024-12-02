@@ -20,9 +20,13 @@ jobs:
 
       - name: Build and run containers
         run: |
-          docker compose up --build --abort-on-container-exit
+          docker compose up --build -d
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
+      - name: Tear down containers
+        if: always()
+        run: |
+          docker compose down
