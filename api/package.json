@@ -3,9 +3,7 @@
     "version": "1.0.0",
     "main": "app.js",
     "scripts": {
-        "start": "node app.js",
-        "test": "jest --coverage --coverageReporters=lcov",
-        "start-and-test": "npm-run-all --parallel start test"
+        "test:coverage": "jest --coverage --coverageReporters=lcov"
     },
     "dependencies": {
         "@sentry/node": "^7.57.0",
