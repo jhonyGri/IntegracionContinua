@@ -27,10 +27,10 @@ jobs:
 
       - name: Copy coverage reports
         run: |
-          mkdir -p ./coverage/api
-          mkdir -p ./coverage/client
-          docker cp dockerimages-api-1:/path/to/coverage/lcov.info ./coverage/api/lcov.info
-          docker cp dockerimages-client-1:/path/to/coverage/lcov.info ./coverage/client/lcov.info
+         mkdir -p ./coverage/api
+         mkdir -p ./coverage/client
+         docker cp dockerimages-api-1:/usr/src/app/coverage/lcov.info ./coverage/api/lcov.info
+         docker cp dockerimages-client-1:/usr/src/app/coverage/lcov.info ./coverage/client/lcov.info
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5
