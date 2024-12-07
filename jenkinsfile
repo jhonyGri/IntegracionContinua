@@ -1,0 +1,37 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('checkout') {
+            steps {
+                git branch:'main', url: 'https://github.com/jhonyGri/Poli-IntegracionContinua.git'
+                
+            }
+        }
+        stage('Build'){
+            steps{
+                echo 'Run build'
+            }
+        }
+        stage('Test'){
+            steps{
+                echo 'Run test'
+            }
+        }
+
+        stage('Despliegue a entorno de pruebas') {
+            steps {
+                script {
+                    sh 'docker-compose -f docker-compose.yml -f docker-compose.lab.yml up -d --build'
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Limpiando los recursos de Docker...'
+            sh 'docker-compose down --volumes'
+        }
+    }
+}
